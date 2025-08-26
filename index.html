@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const contatos = [];
+
+let nomeContato = "";
+let telefoneContato = "";
+let emailContato = "";
+ 
+
+do {
+    // Menu interativo
+  var menuInterativo = Number(
+    prompt(
+      "    >>> MENU <<<\n 1- Cadastrar contato\n 2- Listar contatos\n 3- Buscar contato\n 4- Atualizar contato\n 5- Remover contato\n 0- Sair do Menu\n ESCOLHA UMA OPÇÃO:"
+    )
+  );
+
+  switch (menuInterativo) {
+    case 1:
+      cadastrarContato();
+      break;
+    case 2:
+      listarContatos();
+      break;
+    case 3:
+      buscarContato();
+      break;
+    case 4:
+      atualizarContato();
+      break;
+    case 5:
+      removerContato();
+      break;
+    case 0:
+      alert ("Saindo do menu...");
+      break;
+    default:
+      alert("Valor inválido! Tente novamente.");
+      break;
+  }
+} while (menuInterativo !== 0);
+
+// <<< FUNÇÕES >>>
+function cadastrarContato() {
+  nomeContato = prompt("Digite seu nome completo: ");
+  telefoneContato = prompt("Digite seu número de telefone (XX)XXXXX-XXXX: "); //(XX)XXXXX-XXXX falta validar telefone 
+  emailContato = prompt("Digite o seu email: ");
+    if (nomeContato != null && telefoneContato != null && emailContato != null) {
+        if(emailContato.includes("@") && emailContato.includes(".com")) {
+            for(let i = 0; i < contatos.length; i++) {           
+                if(contatos.includes[i][1](telefoneContato) && contatos.includes[i][2](emailContato)) {
+                    return alert("Contato já cadastrado!");
+            }
+        }
+        alert("Cadastro realizado com sucesso!");
+        return contatos.push([nomeContato, telefoneContato, emailContato]);  
+        } else {
+            return alert("Email inválido! Tente novamente.");
+        }            
+    } else {
+        return alert("Por favor, preencha todos os campos para cadastrar o contato.");
+    }
+  
+}
+
+// Lista todos os contatos já salvos
+function listarContatos() {
+  if (contatos.length === 0) {
+    alert("Nenhum contato cadastrado!");
+  }
+ if (contatos.length != null) {
+  for (let i = 0; i < contatos.length; i++) {   
+      return alert(`>> Contato ${i + 1}\n Nome: ${contatos[i][0]}\n Telefone: ${contatos[i][1]}\n Email: ${contatos[i][2]}\n -------`);
+    }
+  }
+}
+
+
+// Retorna o contato buscado pelo email
+function buscarContato() {
+  let emailBusca = prompt("Digite o email do contato que deseja buscar: ");
+  let encontrado = false;
+
+  for (let i = 0; i < contatos.length; i++) {
+    if (contatos[i][0].toLowerCase() === emailBusca.toLowerCase()) {
+      return alert(
+        `Contato encontrado no índice ${i}: \n Nome: ${contatos[i][0]}\n Telefone: ${contatos[i][1]}\n Email: ${contatos[i][2]}`
+       );
+    }
+  } 
+      return alert("Nenhum contato encontrado com esse nome!");
+}
+
+// Atualiza um valor do contato buscado pelo email
+function atualizarContato() {
+}
+
+// Remove o contato buscado pelo email
+function removerContato() {
+  let removerContato = prompt('Digite o email do contato para ser removido da lista: ');
+  let encontrado = false;
+
+  for (let i = 0; i < contatos.length; i++) {
+    if (contatos[i][0].toUpperCase() === removerContato.toUpperCase()) {
+      contatos.splice(i, 1);
+      alert(`${removerContato} foi removido da lista.`);
+      encontrado = true;
+      break; 
+    }
+  }
+
+  if (!encontrado) {
+    alert(`Contato ${removerContato} não encontrado na lista.`);
+  }
+
+  alert("Lista atualizada de contatos:");
+  listarContatos();
+}      
+    </script>
+</body>
+</html>
