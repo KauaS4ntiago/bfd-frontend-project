@@ -3,67 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
     <link rel="stylesheet" href="style.css">
-    <title>Estudos html</title>
 </head>
 <body>
-    <h1 id="t1">Título principal</h1>
-    <b>Informação 1</b>
 
-    <h2>Subtítulo 2</h2>
-    <p>Informação 2</p>
+    <h1>Cadastro de Produtos</h1>
 
-    <h3>Subtítulo 3</h3>
-    <p>Informação 3</p>
-    
-    <a href="https://google.com" target="_blank">google</a>
+    <input type="text" id="produtoInput" placeholder="Digite o nome do produto">
+    <button onclick="adicionarProduto()">Adicionar</button>
+    <button onclick="ordenarLista()">Ordenar Lista</button>
+    <button onclick="procurarProduto()">Procurar Produto</button>
+    <button onclick="limparLista()">Limpar Lista</button>
 
-    <button onclick="mudarTexto()">Clique aqui para alterar texto</button>
-
-    <p>Imagem:</p>
-    <img src="Sem título.png" alt="descrição da imagem">
-
-    <p>Lista não ordenada</p>
-    <ul>
-        <li>
-            Sol
-        </li>
-        <li>
-            Grama
-        </li>
-        <li>
-            Nuvens
-        </li>   
-    </ul>
-
-    <p>Lista ordenada</p>
-    <ol>
-        <li>
-            Informação 
-        </li>
-        <li>
-            Informação
-        </li>
-        <li>
-            Informação
-        </li>
-    </ol>
-
-    <p>Tabela:</p>
-
-    <table>
-        <tr>
-            <td>Nome</td>
-            <td>Idade</td>
-            <td>Cidade</td>
-        </tr>
-        <tr>
-            <td>João</td>
-            <td>25</td>
-            <td>São Paulo</td>  
-        </tr>
+    <table id="tabelaProdutos">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome do Produto</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
     </table>
 
+    <footer>Exercício prático de HTML + JavaScript</footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
