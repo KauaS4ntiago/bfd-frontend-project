@@ -1,55 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        input {
-            padding: 8px;
-            width: 250px;
-            margin-right: 5px;
-        }
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 80%;
-            background: white;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-            padding: 12px;
-        }
-        th {
-            background: #007BFF;
-            color: white;
-        }
-        td button {
-            background-color: #28a745;
-            margin-right: 5px;
-        }
-        td button:hover {
-            opacity: 0.8;
-        }
-        td .remove {
-            background-color: #dc3545;
-        }
-        footer {
-            margin-top: 30px;
-            font-style: italic;
-        }
+  font-family: 'Roboto', sans-serif;
+  background-color: #e5ded2;
+}
+
+header {
+  background-color: #4161aa;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: #453a24 2px solid;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+header a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  padding: 0.15rem 0.3rem;
+  background-color: rgb(236, 211, 179);
+  display: inline-block;
+  border: #453a24 2px solid;
+  border-radius: 8px;
+}
+
+header a:hover {
+  background-color:rgb(220, 172, 110);
+  color: white;
+  transition: 0.3s;
+}
+
+.pHome {
+  margin: 0.5rem 0;
+  text-align: center;
+  padding: 13.3rem; 
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 30rem;           
+  }
+
+.inputContainer {
+  background-color: #4161aa;
+  border: #453a24 2px solid;
+  width: 25rem;
+  height: 25rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.inputContainer input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0ebe2;
+  outline: none;
+}
+
+.inputContainer button {
+  padding: 0.5rem;
+  border:  #453a24 2px solid;
+  border-radius: 4px;
+  background-color: rgb(236, 211, 179);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.inputContainer button:hover {
+  background-color:rgb(220, 172, 110);
+  color: white;
+  transition: 0.3s;
+}
+
+.containerFuncoes {
+  text-align: center;
+}
+
+.funcoesLista button {
+  background-color: #4161aa;
+  display: inline-block;
+  color: white;
+  border: #453a24 2px solid;
+  padding: 0.125rem 0.25rem;
+  margin:0.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.funcoesLista button:hover {
+  background-color:#293e70;
+  color: white;
+  transition: 0.3s;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+thead {
+  background-color: #4161aa;
+  color: white;
+  border: #453a24 2px solid;
+}
+
+tr {
+  border: #453a24 2px solid;
+}
+
+thead th, tbody td {
+  border: #453a24 2px solid;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#atualizar {
+  background-color: #26a831;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  padding: 0.125rem 0.25rem;
+  cursor: pointer;
+}
+
+#atualizar:hover {
+  background-color: #1a6e22;
+  transition: 0.3s;
+}
+
+#remover {
+  background-color: #c82b2b;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  padding: 0.125rem 0.25rem;
+  cursor: pointer;
+}
+
+#remover:hover {
+  background-color: #911e1e;
+  transition: 0.3s;
+}
+
+#limpar {
+  background-color: #4161aa;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  padding: 0.125rem 0.25rem;
+  cursor: pointer;
+}
+
+#limpar:hover {
+  background-color: #293e70;
+  transition: 0.3s;
+}
+
+footer {
+  background-color: #d6ccb8;
+  text-align: center;
+}
+
+footer a {
+  color: #4161aa;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema gerenciador de produtos</h1>
+        <nav> 
+            <a href="home.html">Home</a>
+            <a href="cadastro.html">Cadastro</a> 
+            <a href="lista.html">Lista</a>
+        </nav>
+    </header>
+    
+    <main>
+    <div class="container">
+        <div class="inputContainer">
+            <h3>Cadastro de produtos</h3>
+        <input type="text" id="nomeInput" placeholder="Digite o nome do produto">
+        <input type="text" id="precoInput" placeholder="Digite o preço do produto">
+        <input type="text" id="categoriaInput" placeholder="Digite a categoria do produto">
+        <input type="text" id="origemInput" placeholder="Digite a origem do produto">
+        <input type="number" id="loteInput" placeholder="Digite o lote do produto">
+        <input type="date" id="validadeInput" placeholder="Digite a validade do produto">
+        <button onclick="adicionarProduto()">Salvar produto</button>
+        </div> 
+    </div>  
+    </main>
+    <footer>
+        <p>Exercício prático de HTML + JavaScript + CSS</p>
+        <p>&copy; Para me conhecer mais <a href="https://github.com/KauaS4ntiago" target="_blank">clique aqui.</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
