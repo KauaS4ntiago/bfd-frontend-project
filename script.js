@@ -69,38 +69,67 @@ function atualizarProduto(index) {
     switch (aux) {
         case "nome":
             const novoNome = prompt("Digite o novo nome: ").trim();
-            if (novoNome) produtos[index].nome = novoNome;
-            renderTabela();
+            if (novoNome) {
+                produtos[index].nome = novoNome;
+            } else {
+                alert("Nome inválido!");
+            }
             break;
         case "preco":
             const novoPreco = prompt("Digite o novo preço: ").trim();
-            if (novoPreco) produtos[index].preco = novoPreco;
-            renderTabela();
+            if (novoPreco) { 
+                produtos[index].preco = novoPreco;
+            } else {
+                alert("Preço inválida!");
+            }
             break;
         case "categoria":
             const novaCategoria = prompt("Digite a nova categoria: ").trim();
-            if (novaCategoria) produtos[index].categoria = novaCategoria;
-            renderTabela();
+            if (novaCategoria) { 
+                produtos[index].categoria = novaCategoria;
+            } else {
+                alert("Data inválida!");
+            }
             break;
         case "origem":
             const novaOrigem = prompt("Digite a nova origem: ").trim();
-            if (novaOrigem) produtos[index].origem = novaOrigem;
-            renderTabela();
+            if (novaOrigem) {
+                produtos[index].origem = novaOrigem;
+            } else {
+                alert("Origem inválida!");
+            }
             break; 
         case "lote":
-            const novoLote = prompt("Digite o novo lote: ").trim();
-            if (novoLote) produtos[index].lote = novoLote;
-            renderTabela();
+            const novoLote = (prompt("Digite o novo lote: ")).trim();
+            const novoLoteNum = Number(novoLote);
+            if (novoLoteNum) {
+                    produtos[index].lote = novoLote;
+            } else {
+                    alert("Lote inválido! Deve ser numérico.");
+            }         
             break; 
         case "validade":
-            const novaValidade = prompt("Digite a nova validade: ").trim();
-            if (novaValidade) produtos[index].validade = novaValidade;
-            renderTabela();
+            const novaValidade = prompt("Digite a nova validade (dd/MM/yyyy): ").trim();
+            if (novaValidade) {
+                if(novaValidade.length === 10 && novaValidade[2] === '/' && novaValidade[5] === '/') {
+                    if (novaValidade[0] < "4" && novaValidade[3] < "2") {
+                        produtos[index].validade = novaValidade;
+                    } else {
+                        alert("Data inválida! Dia deve ser até 31 e mês até 12.");
+                    }
+                } else {
+                    alert("Formato inválido! Use dd/MM/yyyy");
+                }
+            } else {
+                alert("Data inválida!");
+            }
             break;
         default:
             alert("Campo inválido!");
             return; 
     }
+    salvarLocalStorage();
+    renderTabela();
 }
 
 // Ordenar tabela
